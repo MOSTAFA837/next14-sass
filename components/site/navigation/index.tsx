@@ -32,7 +32,7 @@ export default function Navigation() {
         >
           Login
         </Link>
-        <UserButton />
+        <UserButton afterSignOutUrl="/site" />
         <ModeToggle />
       </aside>
     </div>

@@ -1,9 +1,10 @@
-import React from "react";
+import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="h-full flex items-center justify-center">{children}</div>
+    <ClerkProvider appearance={{ baseTheme: dark }}>{children}</ClerkProvider>
   );
 };
 
-export default AuthLayout;
+export default Layout;
