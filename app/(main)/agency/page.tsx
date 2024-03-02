@@ -1,5 +1,11 @@
-import React from "react";
+import { getAuthUserData, verifyAndAcceptInvitation } from "@/lib/queries";
 
-export default function page() {
+export default async function page() {
+  const agancyId = await verifyAndAcceptInvitation();
+  console.log(agancyId);
+
+  // get user details
+  const user = await getAuthUserData();
+
   return <div>page</div>;
 }
